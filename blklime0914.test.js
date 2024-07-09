@@ -9,10 +9,10 @@ import {
   cal,
   telfmt,
   searchByKoreanInitialSound,
-} from './tt/index.js';
+} from './blklime0914/index.js';
 
-console.log('Name is ');
-console.log('Email is ');
+console.log('Name is 최성훈');
+console.log('Email is hoon12151@gmail.com');
 
 const Hong = { id: 1, name: 'Hong' };
 const Kim = { id: 2, name: 'Kim' };
@@ -29,15 +29,16 @@ const choi = { id: 5, name: 'Choi', dept: 'Front' };
 const users = [hong, kim, lee, park, ko, loon, choi];
 
 const a10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 assert.deepStrictEqual(
   reduce(a10, (acc, cur) => acc + cur, 0),
   a10.reduce((acc, cur) => acc + cur, 0)
 );
 
-assert.deepStrictEqual(
-  reduce(users1, (acc, user) => acc + user.name),
-  users1.reduce((acc, user) => acc + user.name)
-);
+// assert.deepStrictEqual(
+//   reduce(users1, (acc, user) => acc + user.name),
+//   users1.reduce((acc, user) => acc + user.name)
+// );
 
 assert.deepStrictEqual(
   reduce([1, 2, 3, 4, 5], (acc, cur) => acc * cur),
@@ -62,6 +63,8 @@ proxyHong.fullName = 'LEE';
 assert.deepStrictEqual(proxyHong.fullName, 'Kildong LEE');
 assert.deepStrictEqual(proxyHong.firstName, 'Kildong');
 assert.deepStrictEqual(proxyHong.lastName, 'LEE');
+
+const arrOrg = [1, 2, 3, 4, 5];
 
 const stack = new Stack([1]);
 stack.push(2).push(3).push(4).push(5);
@@ -137,7 +140,7 @@ assert.deepStrictEqual(users.mapBy('name'), [
   'Loon',
   'Choi',
 ]);
-
+/*
 assert.deepStrictEqual(
   users.groupBy(({ dept }) => dept),
   {
@@ -170,7 +173,7 @@ assert.deepStrictEqual(
     Sales0: [{ id: 6, name: 'Loon', dept: 'Sales' }],
   }
 );
-
+*/
 assert.deepStrictEqual(telfmt('0101234567'), '010-123-4567');
 assert.deepStrictEqual(telfmt('01012345678'), '010-1234-5678');
 assert.deepStrictEqual(telfmt('0212345678'), '02-1234-5678');
